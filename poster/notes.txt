@@ -1,0 +1,1 @@
+Secure multiparty computation offered by Goldreich Micali Widgerson is very generic MPC, and don't leverage the fixed structure of neural networks. In fact, GMW, for example scales linearly with number of AND gates

@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+
+\newcommand{\team}{Skanda Koppula \\ }
+\newcommand{\ps}{Project Proposal}
+
+\usepackage{sansmath}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{minted}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{titlesec}
+\usepackage{subcaption}
+\usepackage{sidecap}
+\usepackage{clrscode}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{stackengine}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{caption}
+\usepackage{mathtools}
+\usepackage{changepage}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\setlength{\parskip}{1pc}
+\setlength{\parindent}{0pt}
+\setlength{\topmargin}{-3pc}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{0pc}
+\setlength{\evensidemargin}{0pc}
+\setlength{\textwidth}{6.5in}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\newcommand{\jacobi}[2]{\left(\dfrac{#1}{#2}\right)}
+\newcommand{\afunc}[1]{\operatorname{\mathsf{#1}}}
+\newcommand{\bfunc}[1]{\operatorname{\mathtt{#1}}}
+\newcommand{\contract}[1][\mathcal{C}]{\mathcal{#1}}
+\newcommand{\Set}[1]{\mathbb{#1}}
+\newcommand{\sample}[2]{{#1} \xleftarrow{\$} {#2}}
+\newcommand{\LSB}{\afunc{LSB}}
+\newcommand{\Enc}{\afunc{Enc}}
+\newcommand{\Dec}{\afunc{Dec}}
+\newcommand{\Gen}{\afunc{Gen}}
+\newcommand{\?}{\stackrel{?}{=}}
+
+%%% magic code to make astericks in superscript in math mode 
+\mathcode`*=\string"8000
+\begingroup
+\catcode`*=\active
+\xdef*{\noexpand\textup{\string*}}
+\endgroup
+%%% magic code ends
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+
+\newcommand{\threepartdef}[6]
+{
+	\left\{
+		\begin{array}{lll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6 
+		\end{array}
+	\right.
+}
+
+\newcommand{\fourpartdef}[8]
+{
+	\left\{
+		\begin{array}{llll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6 \\
+			#7 & \mbox{if } #8 
+		\end{array}
+	\right.
+}
+
+\newcommand{\answer}[1]{
+\newpage
+\noindent
+\framebox{
+	\vbox{
+		6.875 Spring 2017 \hfill {\bf \ps} \hfill #1  \\ 
+		\team \hfill \today
+	}
+}
+\bigskip
+
+}
+
+
+\begin{document}
+\answer{}
+
+The proposed two week project is first a literature overview of methods in literature to do practically efficient inference over encrypted data. The final project would be a roughly ten-page summary with the results of each unique work: formal cryptographic problem setup, the steps in the protocol algorithms and cryptosystem(s) employed, and the detailed proof of security.
+
+Specifically, I had four papers in mind:
+\begin{enumerate}
+    \item Machine Learning Classification over Encrypted Data (Goldwasser, et al.): \url{https://eprint.iacr.org/2014/331.pdf}
+    \item Crypto-Nets: Neural Networks over Encrypted Data (Naehrig, et al.): \url{https://arxiv.org/pdf/1412.6181.pdf}
+    \item Crypto-Nets (V2): High Throughput and Accuracy (Naehrig, et al.): \url{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/04/CryptonetsTechReport.pdf}
+    \item Privacy Preserving Multi-party Machine Learning with Homomorphic Encryption (Ghasemi et al.): \url{https://pmpml.github.io/PMPML16/papers/PMPML16_paper_14.pdf}
+\end{enumerate}
+
+Time permitting it would be interesting to, secondly, implement one method from these papers. I'm interested in the topic as it related to my current research work in fast biometric identification, and with biometric identification, privacy-preserving ways of doing this is good!
+
+\end{document}
+
